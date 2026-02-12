@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#from . import views
 
 from tienda.views import compra
 from tienda.views import saludo
 from tienda.views import mensaje
 from tienda.views import pruebacompra
+from tienda.views import despedir
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -28,4 +30,6 @@ urlpatterns = [
     path("tienda/saludo/", saludo),
     path("tienda/mensaje/", mensaje),
     path("prueba/compra/", pruebacompra),
+    path('despedir', despedir),
+
 ]

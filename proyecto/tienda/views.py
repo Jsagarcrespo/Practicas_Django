@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -15,5 +16,16 @@ def mensaje(request):
 
 def pruebacompra(request):
     return render(request, "prueba/compra.html")
+
+
+
+
+def despedir(Httprquest):
+    return HttpResponse("Adios")
+
+
+def index(request):
+    return HttpResponse("algo habra que poner aqui")
+
 
 
