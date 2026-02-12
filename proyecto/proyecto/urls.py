@@ -20,10 +20,12 @@ from django.urls import path
 from tienda.views import compra
 from tienda.views import saludo
 from tienda.views import mensaje
+from tienda.views import pruebacompra
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("tienda/compra/", compra),
     path("tienda/saludo/", saludo),
     path("tienda/mensaje/", mensaje),
+    path("prueba/compra/", pruebacompra),
 ]

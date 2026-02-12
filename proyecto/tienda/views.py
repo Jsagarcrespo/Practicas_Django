@@ -13,3 +13,7 @@ def mensaje(request):
     return render(request, "tienda/mensaje.html", {'mensaje': leMensaje})
 
 
+def pruebacompra(request):
+    return render(request, "prueba/compra.html")
+
+
