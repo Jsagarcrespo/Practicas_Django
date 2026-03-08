@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante Nova</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'portada/style.css' %}">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🍽 Restaurante Nova</div>
+    <div class="nav-links">
+      <a href="/menu/">Menu</a>
+      <a href="/reservas/">Reservas</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Reserva</h1>
+    <p>Una experiencia gastronómica diferente</p>
+    <div class="hero-buttons">
+      <a href="/menu/" class="btn">Menu</a>
+      <a href="/reservas/" class="btn btn-outline">Reservar</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h2>🍴 Calidad</h2>
+      <p>Ingredientes frescos y cocina artesanal.</p>
+    </div>
+
+    
+  </section>
+
+</body>
+</html>

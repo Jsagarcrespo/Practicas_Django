@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva tu Mesa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reservas/style.css' %}">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🍽 Restaurante Nova</div>
+            <div class="nav-links">
+                <a href="/menu/">Menu</a>
+            <a href="/portada/">Portada</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="card">
+            <h1>Reserva tu Mesa</h1>
+            <p>Completa el formulario para asegurar tu experiencia gastronómica</p>
+
+            <form method="POST">
+                {% csrf_token %}
+                
+                <div class="input-group">
+                    <label>Nombre completo</label>
+                    <input type="text" name="nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Fecha</label>
+                        <input type="date" name="fecha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Hora</label>
+                        <input type="time" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Número de personas</label>
+                    <input type="number" name="personas" min="1" max="20" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Comentarios (opcional)</label>
+                    <textarea name="comentarios" rows="3"></textarea>
+                </div>
+
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
