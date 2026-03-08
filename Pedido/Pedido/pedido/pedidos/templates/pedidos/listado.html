@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pedidos/style.css' %}">
+    <title>Producto</title>
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Producto</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/usuario/">Usuario</a></li>
+            <li><a href="/pago/">Pago</a></li>
+            <li><a href="/producto/">Producto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Catalogo del listado de productos</h1>
+        <table border="1">
+            
+            <thead>
+                <th>Nombre</th>
+                <th>Descipción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </thead>
+            <tbody>
+                {% for p in productos %}
+                <tr>
+                    
+                    <td>{{ p.nomProduct }}</td>
+                    <td>{{ p.descripcion }}</td>
+                    <td>{{ p.precio }} €</td>
+                    <td>{{ p.stock }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </main>
+
+    <footer>
+        <p>Aplicación creada con Django</p>
+    </footer>
+
+</body>
+</html>

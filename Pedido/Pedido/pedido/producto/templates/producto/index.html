@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pedidos/style.css'%}" >
+    <title>Producto</title>
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Producto</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/usuario/">Usuario</a></li>
+            <li><a href="/pago/">Pago</a></li>
+            <li><a href="/pedidos/">Pedidos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <h1>Crear Producto</h1>
+
+        <form action="POST">
+            {% csrf_token %}
+
+            <label for="nombreProducto">Nombre del producto</label>
+            <input type="text" name="nombreProducto" id="nombreProducto"></input><br/>
+            
+            <label for="descripcion">Descripcion del producto</label>
+            <input type="text" name="descripcion" id="descripcion"></input><br/>
+            
+            <label for="precio">Precio del producto</label>
+            <input type="number" name="precio" id="precio"></input><br/>
+            
+            <label for="stock">Cuantos hay en stock</label>
+            <input type="number" name="stock" id="stock"></input><br/>
+
+            <button type="submit">Guardar Producto</button>
+        </form>
+        
+        
+
+        
+
+    </main>
+
+    <footer>
+        <p>Aplicación creada con Django</p>
+    </footer>
+
+</body>
+</html>
